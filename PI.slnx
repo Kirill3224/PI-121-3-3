@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PI.BLL/PI.BLL.csproj" />
+  <Project Path="PI.DAL/PI.DAL.csproj" />
+  <Project Path="PI.PL/PI.PL.csproj" />
+  <Project Path="PI.Tests/PI.Tests.csproj" />
+</Solution>

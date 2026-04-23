@@ -9,6 +9,8 @@ public class Product : BaseEntity
     public int StockQuantity { get; private set; }
     public string? ImageUrl { get; private set; }
 
+    public Category Category { get; private set; } = null!;
+
     protected Product() { }
 
     private Product(Guid categoryId, string name, string description, decimal price, int stockQuantity, string? imageUrl)

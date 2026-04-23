@@ -1,0 +1,30 @@
+﻿namespace PI.DAL.Entities.Catalog;
+
+public class Category : BaseEntity
+{
+    public string Name { get; private set; } = null!;
+    public string Description { get; private set; } = null!;
+
+    public virtual ICollection<Product> Products { get; private set; } = null!;
+
+    protected Category()
+    {
+        Products = new List<Product>();
+    }
+
+    private Category(string name, string description) : this()
+    {
+        Name = name;
+        Description = description;
+    }
+
+    public static Category Create(string name, string description)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException("Category name cannot be null or empty.", nameof(name));
+        if (string.IsNullOrWhiteSpace(description))
+            throw new ArgumentException("Category description cannot be null or empty.", nameof(description));
+
+        return new Category(name, description);
+    }
+}

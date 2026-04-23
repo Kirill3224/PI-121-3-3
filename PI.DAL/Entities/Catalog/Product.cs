@@ -29,7 +29,7 @@ public class Product : BaseEntity
             throw new ArgumentException("Product description cannot be null or empty.", nameof(description));
         if (price < 0)
             throw new ArgumentException("Price must be a positive value.", nameof(price));
-         if (stockQuantity < 0)
+        if (stockQuantity < 0)
             throw new ArgumentException("Stock quantity cannot be negative.", nameof(stockQuantity));
 
         return new Product(categoryId, name, description, price, stockQuantity, imageUrl);

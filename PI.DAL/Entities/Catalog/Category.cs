@@ -16,7 +16,6 @@ public class Category : BaseEntity
     {
         Name = name;
         Description = description;
-        Products = new List<Product>();
     }
 
     public static Category Create(string name, string description)

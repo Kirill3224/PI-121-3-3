@@ -9,10 +9,14 @@ public class Order : BaseEntity
     public OrderStatus Status { get; private set; }
     public decimal TotalAmount { get; private set; }
     public User User {get; private set; } = null!;
+    public ICollection<OrderItem> OrderItems { get; private set; } = null!;
         
-    protected Order() { } 
+    protected Order()
+    {
+        OrderItems = new List<OrderItem>();
+    } 
 
-    private Order(Guid userId, decimal totalAmount, OrderStatus status = OrderStatus.New)
+    private Order(Guid userId, decimal totalAmount, OrderStatus status = OrderStatus.New) : this()
     {
         UserId = userId;
         TotalAmount = totalAmount;

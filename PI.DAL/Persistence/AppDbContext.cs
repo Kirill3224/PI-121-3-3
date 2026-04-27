@@ -2,7 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using PI.DAL.Entities.Catalog;
 using PI.DAL.Entities.Identity;
 using PI.DAL.Entities.Orders;
-namespace PI.DAL;
+
+namespace PI.DAL.Persistence;
 
 public class AppDbContext : DbContext
 {

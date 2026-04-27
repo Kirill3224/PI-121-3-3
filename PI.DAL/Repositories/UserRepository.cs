@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PI.DAL.Entities.Identity;
 using PI.DAL.Interfaces;
+using PI.DAL.Persistence;
 
 namespace PI.DAL.Repositories;
 

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PI.DAL;
+using PI.DAL.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 

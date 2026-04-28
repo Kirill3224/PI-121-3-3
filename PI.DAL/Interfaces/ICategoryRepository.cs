@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PI.DAL.Entities.Catalog;
 
-namespace PI.DAL.Interfaces
+namespace PI.DAL.Interfaces;
+
+public interface ICategoryRepository : IBaseRepository<Category>
 {
-    internal interface ICategoryRepository
-    {
-        // No custom methods required at this stage
-    }
 }

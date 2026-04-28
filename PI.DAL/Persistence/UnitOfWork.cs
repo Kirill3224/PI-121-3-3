@@ -8,8 +8,8 @@ public class UnitOfWork : IUnitOfWork
     private readonly AppDbContext _context;
 
     public IUserRepository Users { get; }
-    public ICategoryRepository Categories { get; private set; }
-    public IProductRepository Products { get; private set; }
+    public ICategoryRepository Categories { get; }
+    public IProductRepository Products { get; }
 
     public UnitOfWork(AppDbContext context)
     {
